@@ -25,9 +25,10 @@ Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and a
 
 **Procedure**
 
-/* write all the steps invloved */
+/* writemodule siso(din, clk, rst, dout); input din; input clk; input rst; output dout; reg dout; reg [7:0]x; always @ (posedge(clk) or posedge(rst)) begin if (rst==1'b1) begin dout=8'hzz; end else begin x={x[6:0],din}; dout=x[7]; end end endmodule all the steps invloved */
 
 **PROGRAM**
+module siso(din, clk, rst, dout); input din; input clk; input rst; output dout; reg dout; reg [7:0]x; always @ (posedge(clk) or posedge(rst)) begin if (rst==1'b1) begin dout=8'hzz; end else begin x={x[6:0],din}; dout=x[7]; end end endmodule
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming.
 
